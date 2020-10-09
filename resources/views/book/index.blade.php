@@ -10,8 +10,7 @@
           <tr>
             @foreach ($columns as $column)
               <th class="px-4 py-2">{{$column}}</th>
-            @endforeach
-            
+            @endforeach            
 
             {{-- <th class="px-4 py-2">Naslov</th>
             <th class="px-4 py-2">Vrsta gradiva</th>
@@ -32,23 +31,13 @@
           
             @foreach ($books as $book)
             <tr>
-
-                {{-- <td class="border px-4 py-2"> {{ $book->id }}</td>
-                <td class="border px-4 py-2"> {{ $book->naslov }}</td>
-                <td class="border px-4 py-2"> {{ $book->vrsta_gradiva }}</td>
-                <td class="border px-4 py-2"> {{ $book->jezik }}</td>
-                <td class="border px-4 py-2"> {{ $book->leto }}</td>
-                <td class="border px-4 py-2"> {{ $book->zaloznistvo_izdelava }}</td>
-                <td class="border px-4 py-2"> {{ $book->fizicni_opis }}</td>
-                <td class="border px-4 py-2"> {{ $book->st_strani }}</td>
-                <td class="border px-4 py-2"> {{ $book->drugi_avtorji }}</td>
-                <td class="border px-4 py-2"> {{ $book->isbn }}</td>
-                <td class="border px-4 py-2"> {{ $book->cobis_is }}</td>
-                <td class="border px-4 py-2"> {{ $book->ocena_knjige }}</td>
-                <td class="border px-4 py-2"> {{ $book->opis }}</td> --}}
-              
+                @foreach ($columns as $column)
+                  <td class="border px-4 py-2"> {{ $book->$column }}</td>    
+                @endforeach
             </tr>
             @endforeach
+            
+            
             
           
         </tbody>
