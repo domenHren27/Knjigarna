@@ -19,13 +19,16 @@ class CreateBooksTable extends Migration
             $table->string('naslov', 100);
             $table->string('vrsta_gradiva', 100);
             $table->string('jezik');
-            $table->integer('leto');
+            $table->integer('leto');            
             $table->string('zaloznistvo_izdelava', 100);
             $table->string('fizicni_opis', 100);
+            $table->integer('st_strani');
             $table->string('drugi_avtorji', 100);
-            $table->bigInteger('isbn')->unique();
-            $table->bigInteger('udk')->unique();
-            $table->bigInteger('cobis_id');
+            $table->string('isbn')->unique();            
+            $table->string('cobis_id')->nullable();
+            $table->double('ocena_knjige');
+            $table->integer('st_ocen');
+            $table->text('opis')->nullable();
             $table->timestamps();
         });
     }

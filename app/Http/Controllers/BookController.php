@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
@@ -13,7 +15,18 @@ class BookController extends Controller
      */
     public function index()
     {
-        return view('book.index');
+        $books = Book::all();
+
+        $book = new Book;
+
+        $table = $book->getTable();
+
+        $columns = DB::getSchemaBuilder()->getColumnListing($table);
+
+        
+
+
+        return view('book.index')->with('books' , $books)->with('columns', $columns);
     }
 
     /**

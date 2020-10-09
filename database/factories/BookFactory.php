@@ -22,7 +22,20 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'avtor' => $this->faker->name,
+            'naslov' => $this->faker->sentence(3),
+            'vrsta_gradiva' => 'fantazija',
+            'jezik' => 'slovenski',
+            'leto' => $this->faker->year,
+            'zaloznistvo_izdelava' => 'mladinska knjiga',
+            'fizicni_opis' => 'ilus',
+            'st_strani' => $this->faker->numberBetween(1, 1000),
+            'drugi_avtorji' => $this->faker->name,
+            'isbn' => $this->faker->isbn10,
+            'cobis_id' => $this->faker->isbn13,
+            'ocena_knjige' => $this->faker->randomFloat(2,1, 5),
+            'st_ocen' => $this->faker->randomNumber(6),
+            'opis' => $this->faker->text
         ];
     }
 }
