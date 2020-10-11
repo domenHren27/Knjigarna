@@ -25,7 +25,7 @@ class BookController extends Controller
 
         
 
-
+        //Kreiramo tabelo index podamo stolpce in polja
         return view('book.index')->with('books' , $books)->with('columns', $columns);
     }
 
@@ -36,7 +36,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('book.create');
     }
 
     /**
@@ -92,6 +92,9 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book = Book::find($id);
+        $book->delete();
+
+        return redirect('/books');
     }
 }

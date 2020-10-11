@@ -42155,8 +42155,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Homestead_Projects\diplomska\bookCatcher\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Homestead_Projects\diplomska\bookCatcher\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Laravel_Projects\Knjigarna\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Laravel_Projects\Knjigarna\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
