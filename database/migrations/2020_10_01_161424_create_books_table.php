@@ -21,13 +21,13 @@ class CreateBooksTable extends Migration
             $table->string('jezik');
             $table->integer('leto');            
             $table->string('zaloznistvo_izdelava', 100);
-            $table->string('fizicni_opis', 100);
+            $table->string('fizicni_opis', 100)->nullable();
             $table->integer('st_strani');
             $table->string('drugi_avtorji', 100);
             $table->string('isbn')->unique();            
             $table->string('cobis_id')->nullable();
-            $table->double('ocena_knjige');
-            $table->integer('st_ocen');
+            $table->double('ocena_knjige')->nullable();
+            $table->integer('st_ocen')->nullable();
             $table->text('opis')->nullable();
             $table->timestamps();
         });

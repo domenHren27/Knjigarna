@@ -97,4 +97,9 @@ class BookController extends Controller
 
         return redirect('/books');
     }
+
+    public function validateTheRequest()
+    {
+                
+    }
 }
