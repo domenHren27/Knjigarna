@@ -23,7 +23,7 @@ class CreateBooksTable extends Migration
             $table->string('zaloznistvo_izdelava', 100);
             $table->string('fizicni_opis', 100)->nullable();
             $table->integer('st_strani');
-            $table->string('drugi_avtorji', 100);
+            $table->string('drugi_avtorji', 255)->nullable();
             $table->string('isbn')->unique();            
             $table->string('cobis_id')->nullable();
             $table->double('ocena_knjige')->nullable();

@@ -47,7 +47,12 @@
             @endforeach     
           </tbody>
         </table>
+        
       </div>
+      <div class="mt-3 ml-3 ">
+        <a class="underline bg-purple-400" href="/books/create">Ustavri knjigo</a>
+      </div>
+      
       
       
     

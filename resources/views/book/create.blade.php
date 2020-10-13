@@ -5,31 +5,31 @@
         </h2>
       </x-slot>
       <div class="flex justify-center mt-4">
-        <form method="post" action="/books" class="w-full max-w-lg">
+        <form method="POST" action="/books" class="w-full max-w-lg">
           @csrf
           
 
             
-            <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="flex flex-wrap -mx-3 mb-6 items-center">
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="avtor">
                   Avtor
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="avtor" id="avtor" type="text" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="avtor" id="avtor" type="text" placeholder="Ime in primek avtorja">
                 
               </div>
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="naslov">
                   Naslov
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="naslov" id="naslov" type="text" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="naslov" id="naslov" type="text" placeholder="Naslov knjige">
                 
               </div>
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="vrsta-gradiva">
                   Vrsta gradiva
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="vrsta-gradiva" id="vrsta-gradiva" type="text" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="vrsta_gradiva" id="vrsta_gradiva" type="text" placeholder="Vrsta gradiva 'Žaner'">
                 
               </div>
 
@@ -51,7 +51,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="leto">
                   Leto
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="leto" name="leto" type="number" step="1" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="leto" name="leto" type="number" step="1" placeholder="2009">
                 
               </div>
               <div class="w-full px-3">
@@ -59,28 +59,28 @@
                   Zaloznistvo in izdelava
                 </label>
                 <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="zaloznistvo-in-izdelava" 
-                name="zaloznistvo-in-izdelava" type="text" placeholder="">
+                name="zaloznistvo_izdelava" type="text" placeholder="Založnik in izdelovalec knjige">
                 
               </div>
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="fizicni-opis">
                   Fizični opis
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="fizicni-opis" name="fizicni-opis" type="text" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="fizicni-opis" name="fizicni_opis" type="text" placeholder="Trde platnice:ilus">
                 
               </div>
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="st-strani">
                   Št. strani
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="st-strani" name="st-strani" type="number" step="1" placeholder="300">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="st-strani" name="st_strani" type="number" step="1" placeholder="300">
                 
               </div>
               <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="drugi-avtorji">
                   Drugi avtorji
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="drugi-avtorji" name="drugi-avtorji" type="text" placeholder="">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="drugi-avtorji" name="drugi_avtorji" type="text" placeholder="Drugi avtorji knjige">
                 
               </div>
               <div class="w-full px-3">
@@ -94,7 +94,7 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cobis-id">
                   COBIS ID
                 </label>
-                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="cobis-id" name="cobis-id" type="text" placeholder="251517184">
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="cobis-id" name="cobis_id" type="text" placeholder="251517184">
                 
               </div>
               <div class="w-full px-3">
@@ -103,14 +103,34 @@
                 </label>
                 
                 <textarea class="w-full resize-none"id="opis" name="opis" rows="10" cols="50">
-                  
+                  Nekaj o knjigi...
                 </textarea>
                 
+                <button type="submit" value="Submit" class="center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                  Potrdi
+                </button>
+
+                <div class="mt-3 ml-3 ">
+                  <a class="underline bg-purple-400" href="/books">Nazaj</a>
+                </div>
+
+                @if ($errors->any())
+                  <div class="mt-3 bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                        <li class="font-bold">{{ $error }}</li>
+                      @endforeach
+                    </ul>
+                  </div>
+                @endif
               </div>
 
             </div>
           </form>
-      </div>
+          
+        </div>
+
+      
       
 
 </x-app-layout>
