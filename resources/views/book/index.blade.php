@@ -30,6 +30,7 @@
                         <button type="submit" value="Submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
                           Izbriši
                         </button>
+                        <a href="books/{{$book->id}}"> Izberi</a>
                       </form>
                       
                     </td>   
