@@ -106,12 +106,12 @@
                   Nekaj o knjigi...
                 </textarea>
                 
-                <button type="submit" value="Submit" class="center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button type="submit" value="Submit" class="bg-white hover:bg-orange-darky text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                   Potrdi
                 </button>
 
-                <div class="mt-3 ml-3 ">
-                  <a class="underline bg-purple-400" href="/books">Nazaj</a>
+                <div class="mt-3">
+                  <a class="bg-white hover:bg-orange-darky text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="/books">Nazaj</a>
                 </div>
 
                 @if ($errors->any())

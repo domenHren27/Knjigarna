@@ -47,6 +47,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+        
         $data = $request->validate([
             'avtor' => 'required|string|max:100',
             'naslov' => 'required|string|max:100',
@@ -67,7 +68,7 @@ class BookController extends Controller
        
         $book->save();
 
-        return redirect('/books');
+        return redirect()->route('books.index');
     }
 
     /**
@@ -89,7 +90,7 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('book.edit', ['book' => Book::findOrFail($id)]);
     }
 
     /**
@@ -101,7 +102,25 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'avtor' => 'required|string|max:100',
+            'naslov' => 'required|string|max:100',
+            'vrsta_gradiva' => 'required|string|max:100',
+            'jezik' => 'required|string',
+            'leto' => 'required|integer',
+            'zaloznistvo_izdelava' => 'required|string|max:100',
+            'fizicni_opis' => 'nullable|string|max:100',
+            'st_strani' => 'required|integer',
+            'drugi_avtorji' => 'nullable|string|max:255',
+            'opis' => 'nullable|string'
+        ]);
+
+        
+        $book = Book::findOrFail($id);
+
+        $book->update($data);
+
+        return redirect()->route('books.index');
     }
 
     /**
@@ -118,19 +137,21 @@ class BookController extends Controller
         return redirect('/books');
     }
 
+
+    //Še ne uporabljena metoda
     public function validateTheRequest()
     {
         return request()->validate([
-            'avtor' => 'required|string|max:100',
-            'naslov' => 'required|string|max:100',
-            'vrsta_gradiva' => 'required|string|max:100',
-            'jezik' => 'required|string',
-            'leto' => 'required|integer',
-            'zaloznistvo_izdelava' => 'required|stirng|max:100',
+            'avtor' => 'sometimes|required|string|max:100',
+            'naslov' => 'sometimes|required|string|max:100',
+            'vrsta_gradiva' => 'sometimes|required|string|max:100',
+            'jezik' => 'sometimes|required|string',
+            'leto' => 'sometimes|required|integer',
+            'zaloznistvo_izdelava' => 'sometimes|required|stirng|max:100',
             'fizicni_opis' => 'nullable|string|max:100',
-            'st_strani' => 'required|integer',
+            'st_strani' => 'sometimes|required|integer',
             'drugi_avtorji' => 'nullable|string|max:255',
-            'isbn' => 'required|unique:books,isbn',
+            'isbn' => 'sometimes|required|unique:books,isbn',
             'cobis_id' => 'nullable|unique:books,cobis_id',
             'opis' => 'nullable|string'
             // Manjka št. ocen in opis, ki ju bomo potegnili preko goodreads

@@ -30,7 +30,8 @@
                         <button type="submit" value="Submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
                           Izbriši
                         </button>
-                        <a href="books/{{$book->id}}"> Izberi</a>
+                        <a href="{{$book->path()}}"> Izberi</a>
+                      <a href="{{$book->path()}}/edit"> Edit</a>
                       </form>
                       
                     </td>   
@@ -51,7 +52,7 @@
         
       </div>
       <div class="mt-3 ml-3 ">
-        <a class="underline bg-purple-400" href="/books/create">Ustavri knjigo</a>
+        <a class="bg-white hover:bg-orange-darky text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="/books/create">Ustavri knjigo</a>
       </div>
       
       
