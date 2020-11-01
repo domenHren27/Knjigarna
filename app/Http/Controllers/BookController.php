@@ -112,6 +112,7 @@ class BookController extends Controller
             'fizicni_opis' => 'nullable|string|max:100',
             'st_strani' => 'required|integer',
             'drugi_avtorji' => 'nullable|string|max:255',
+            
             'opis' => 'nullable|string'
         ]);
 
